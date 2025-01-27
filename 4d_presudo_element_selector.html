@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element Selectors</title>
+    <link rel="stylesheet" href="pseudo_element_selectors.css">
+    <style>
+        p::before {
+            content: "Start: ";  
+            /* Adds content before the element */
+            color: orange;
+        }
+        p::after {
+            content: " :End";  
+            /* Adds content after the element */
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-element Selectors Example</h1>
+    <p>This is a paragraph with pseudo-elements.</p>
+</body>
+</html>

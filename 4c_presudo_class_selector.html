@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+<meta charset=”UTF-8”> 
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0”> 
+<title>Pseudo-class Selectors</title> 
+<link rel=”stylesheet” href=”pseudo_class_selectors.css”> 
+<style>
+    A:hover { 
+Color: red; 
+/* Changes color when hovered */ 
+} 
+A:visited { 
+Color: purple; 
+/* Changes color for visited links */ 
+} 
+Li:first-child { 
+Font-weight: bold;  
+/* Styles the first child of a list */ 
+}
+</style>
+</head> 
+<body> 
+<h1>Pseudo-class Selectors Example</h1> 
+<ul> 
+<li>First item (First-child)</li> 
+<li>Second item</li> 
+</ul> 
+<a href=”#”>Hover over me (Hover)</a> 
+<br> 
+<a href=https://example.com target=”_blank”>Visit this link (Visited)</a> 
+</body> 
+</html>

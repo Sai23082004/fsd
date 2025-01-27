@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="”UTF-8”" />
+    <meta
+      name="”viewport”"
+      content="”width"
+      ="device-width,"
+      initial-scale="1.0”"
+    />
+    <title>Simple Selectors</title>
+    <link rel="”stylesheet”" href="”simple_selectors.css”" />
+    <style>
+      H1 {
+        color: blue;
+        /* Element selector */
+      }
+      #main-heading {
+        text-align: center;
+        /* ID selector */
+        font-size: 2em;
+      }
+      .intro {
+        color: green;
+        /* Class selector */
+      }
+      P,
+      div {
+        font-style: italic;
+        /* Group selector */
+      }
+      • {
+        background-color: #f9f9f9;
+        /* Universal selector */
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="”main-heading”">Simple Selectors Example</h1>
+    <p class="”intro”">This is a paragraph styled with a class selector.</p>
+    <p>This paragraph is styled using a universal selector.</p>
+    <div>Another div styled with a group selector.</div>
+  </body>
+</html>

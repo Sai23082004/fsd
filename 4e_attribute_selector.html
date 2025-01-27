@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors</title>
+    <link rel="stylesheet" href="attribute_selectors.css">
+    <style>
+        /* Targets elements with any "a" attribute */
+        [a] { 
+            color: blue; 
+            text-decoration: underline; 
+        }
+        /* Targets elements with a specific href value */
+        [href="https://example.com"] { 
+            color: red; 
+        }
+        /* Targets elements with an attribute value containing a specific word */
+        [class~="highlight"] { 
+            background-color: yellow; 
+        }
+        /* Targets elements with an attribute value starting with a specific string */
+        [placeholder^="Enter"] { 
+            border: 2px solid green; 
+        }
+        /* Targets elements with an attribute value ending with a specific string */
+        [placeholder$="password"] { 
+            border: 2px solid red; 
+        }
+        /* Targets elements with an attribute value containing a specific substring */
+        [placeholder*="name"] { 
+            background-color: lightblue; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute Selectors Example</h1>
+    <a href="https://example.com" target="_blank">External Link</a>
+    <a href="#section1">Internal Link</a>
+    <a href="#section2" class="highlight">Highlighted Link</a>
+    <input type="text" placeholder="Enter your name">
+    <input type="password" placeholder="Enter your password">
+    <input type="email" placeholder="Enter your email">
+    <p id="intro">This paragraph has an ID.</p>
+    <p class="info">This paragraph has a class.</p>
+    <p class="info extra">This paragraph has multiple classes.</p>
+</body>
+</html>

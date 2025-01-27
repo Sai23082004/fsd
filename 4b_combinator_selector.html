@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="”UTF-8”" />
+    <meta
+      name="”viewport”"
+      content="”width"
+      ="device-width,"
+      initial-scale="1.0”"
+    />
+    <title>Combinator Selectors</title>
+    <link rel="”stylesheet”" href="”combinator_selectors.css”" />
+    <style>
+      Div p {
+        color: blue;
+        /* Descendant selector */
+      }
+      Div > p {
+        color: green;
+        /* Child selector */
+      }
+      H1 + p {
+        color: red;
+        /* Adjacent sibling selector */
+      }
+      H1 ~ p {
+        background-color: yellow;
+        /* General sibling selector */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Combinator Selectors Example</h1>
+    <p>This paragraph is adjacent to the heading (Adjacent sibling).</p>
+    <p>This paragraph is a general sibling (General sibling).</p>
+    <div>
+      <p>This paragraph is a descendant of div (Descendant selector).</p>
+      <p>This paragraph is a child of div (Child selector).</p>
+    </div>
+  </body>
+</html>
