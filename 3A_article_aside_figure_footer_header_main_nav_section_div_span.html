@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<head> 
+    <title>HTML Semantic Elements</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+        } 
+        header, 
+        footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 1em; 
+        } 
+        nav { 
+            background: #555; 
+            color: white; 
+            padding: 1em; 
+        } 
+        nav a { 
+            color: white; 
+            margin: 0 10px; 
+            text-decoration: none; 
+        } 
+        main { 
+            padding: 1em; 
+        } 
+        article { 
+            margin-bottom: 2em;       } 
+
+        aside { 
+            background: #f4f4f4; 
+            padding: 1em; 
+            border-left: 4px solid #333; 
+        } 
+        figure { 
+            text-align: center; 
+        } 
+        figcaption { 
+            font-size: 0.9em; 
+            color: #555; 
+        } 
+        .highlight { 
+            color: red; 
+        } 
+    </style> 
+</head> 
+ 
+<body> 
+    <header> 
+        <h1>Welcome to My Webpage</h1> 
+    </header> 
+    <nav> 
+        <a href="#section1">Home</a> 
+        <a href="#section2">About</a> 
+        <a href="#section3">Contact</a> 
+    </nav> 
+    <main> 
+        <section id="section1"> 
+            <header> 
+                <h2>Introduction</h2> 
+            </header> 
+            <article> 
+                <h3>Importance of Semantic HTML</h3> 
+                <p>Semantic HTML improves accessibility, SEO, and clarity. For example, <span 
+                        class="highlight">&lt;article&gt;</span> and &lt;section&gt; structure content.</p> 
+            </article>     
+            <aside> 
+                <p>Tip: Use semantic tags for better screen reader support.</p> 
+            </aside> 
+        </section> 
+        <section id="section2"> 
+            <header> 
+                <h2>About Me</h2> 
+            </header> 
+            <article> 
+                <figure> 
+                    <img src="1.jpg" alt="Profile picture" width="150"> 
+                    <figcaption>Profile Picture</figcaption> 
+                </figure> 
+                <p>I am a web developer passionate about accessible websites.</p> 
+            </article> 
+        </section> 
+        <section id="section3"> 
+            <header> 
+                <h2>Contact</h2> 
+            </header> 
+            <article> 
+                <p>Reach me at <span class="highlight">Astro@creater.com</span>.</p> 
+            </article> 
+        </section> 
+    </main> 
+    <footer> 
+        <p>&copy; 2025 My Webpage</p> 
+    </footer> 
+</body>  </html>

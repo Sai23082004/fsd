@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Styles in HTML</title> 
+    <!-- External CSS Link --> 
+    <link rel="stylesheet" href="styles.css"> 
+    <style> 
+        /* Internal CSS */ 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f4f4; 
+        } 
+        h1 { 
+            color: blue; 
+            /* Selector: h1, Property: color, Value: blue */ 
+            text-align: center; 
+        } 
+        .highlight { 
+            background-color: yellow; 
+            /* Selector: .highlight, Property: background-color, Value: yellow */ 
+            font-weight: bold; 
+        } 
+        #footer { 
+            text-align: center; 
+            font-size: 0.9em; 
+            color: gray; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <header> 
+        <h1>HTML Styles Example</h1> 
+    </header> 
+    <main> 
+        <p style="color: green; font-size: 1.2em;">This is an example of <strong>inline style</strong>. 
+            <!-- Selector: Inline, Property: color, Value: green --> 
+        </p> 
+        <p class="highlight">This text is styled using <strong>internal CSS</strong>.</p> 
+        <p class="external-style">This text will be styled using <strong>external CSS</strong> defined 
+in the linked 
+            file.</p> 
+    </main> 
+    <footer id="footer"> 
+        &copy; 2025 HTML Styles Example 
+    </footer>  </body>  </html>
