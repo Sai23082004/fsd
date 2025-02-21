@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<head> 
+    <title>CSS Box Model Example</title> 
+    <style> 
+        .box { 
+            width: 300px; 
+            /* Content area width */ 
+            height: 150px; 
+            /* Content area height */ 
+            background-color: lightblue; 
+            /* Background for the content area */ 
+            border: 10px solid navy; 
+            /* Border around the content */ 
+            padding: 20px; 
+            /* Space between the content and the border */ 
+            margin: 30px; 
+            /* Space outside the border */ 
+            box-sizing: border-box; 
+        }   box-container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            /* Center the box in the viewport */ 
+        }      </style> 
+              </head>  <body> 
+     <div class="box-container"> 
+          <div class="box">  This box demonstrates the CSS Box Model.      </div> </div> 
+</body> </html> 
