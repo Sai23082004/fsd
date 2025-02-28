@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Internal and External JavaScript</title> 
+    <script> 
+        // Internal JavaScript 
+        function greet() { 
+            alert("Hello from Internal JavaScript!"); 
+        } 
+    </script> 
+</head> 
+<body> 
+    <button onclick="greet()">Click Me (Internal JS)</button> 
+    <br><br> 
+    <!-- External JavaScript --> 
+    <script src="6A.js"></script> 
+    <button onclick="externalGreet()">Click Me (External JS)</button> 
+    <script>
+        function externalGreet() { 
+    alert("Hello from External JavaScript!"); 
+} 
+    </script>
+</body> 
+</html> 

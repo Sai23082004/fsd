@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Take Input in JavaScript</title> 
+</head> 
+<body> 
+    <h2>Using prompt()</h2> 
+    <script> 
+        var name = prompt("Please enter your name:"); 
+        alert("Hello, " + name); 
+    </script> 
+    <h2>Using form input</h2> 
+    <form id="nameForm"> 
+        Name: <input type="text" id="nameInput"> 
+        <button type="button" onclick="getName()">Submit</button> 
+    </form> 
+    <script> 
+        function getName() { 
+            var userName = document.getElementById("nameInput").value; 
+            alert("Hello, " + userName); 
+        } 
+    </script> 
+</body> 
+</html> 

@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Voter Information</title> 
+</head> 
+<body> 
+    <h2>Voter Information</h2> 
+    <script> 
+        var name = prompt("Enter your name:"); 
+        var age = prompt("Enter your age:"); 
+        // Determine if the user can vote 
+        var canVote = (age >= 18) ? "Yes" : "No"; 
+        // Display the information in a table 
+        document.write("<table border='1'>"); 
+        document.write("<tr><th>Name</th><th>Age</th><th>Can Vote?</th></tr>"); 
+        document.write("<tr><td>" + name + "</td><td>" + age + "</td><td>" + canVote + 
+"</td></tr>"); 
+        document.write("</table>"); 
+    </script> 
+</body> 
+</html>
