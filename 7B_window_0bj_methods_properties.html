@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+
+<head>> 
+    <title>Window Object Example</title> 
+</head> 
+<body> 
+    <button onclick="openWindow()">Open Window</button> 
+    <button onclick="closeWindow()">Close Window</button> 
+    <script> 
+        var newWindow; 
+        function openWindow() { 
+            // Using window.open() to open a new window 
+            newWindow = window.open("https://www.example.com", "_blank", "width=600,height=400"); 
+        } 
+        function closeWindow() { 
+            // Using window.close() to close the window 
+            if (newWindow) { 
+                newWindow.close(); 
+            }    } 
+    </script> 
+</body> 
+</html> 

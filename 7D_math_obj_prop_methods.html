@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Math Object Example</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        #output { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            background-color: #f9f9f9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>Math Object Operations in JavaScript</h1> 
+    <div id="output"></div> 
+    <script> 
+        // Output div element to show results 
+        var outputDiv = document.getElementById("output"); 
+        // Using Math.random() to generate a random number between 0 and 1 
+        var randomNumber = Math.random(); 
+        outputDiv.innerHTML += "Random Number (between 0 and 1): " + randomNumber + 
+"<br><br>"; 
+        // Using Math.floor() to round a number down 
+        var number = 4.9; 
+        var flooredNumber = Math.floor(number); 
+        outputDiv.innerHTML += "Math.floor(4.9): " + flooredNumber + "<br><br>"; 
+        // Using Math.ceil() to round a number up 
+        var ceilNumber = Math.ceil(number); 
+        outputDiv.innerHTML += "Math.ceil(4.9): " + ceilNumber + "<br><br>"; 
+        // Using Math.max() to find the maximum value 
+        var maxValue = Math.max(10, 20, 30, 40, 50); 
+        outputDiv.innerHTML += "Maximum Value (10, 20, 30, 40, 50): " + maxValue + "<br><br>"; 
+        // Using Math.min() to find the minimum value 
+        var minValue = Math.min(10, 20, 30, 40, 50); 
+        outputDiv.innerHTML += "Minimum Value (10, 20, 30, 40, 50): " + minValue + "<br><br>"; 
+        // Using Math.sqrt() to find the square root of a number 
+        var sqrtValue = Math.sqrt(16); 
+        outputDiv.innerHTML += "Square Root of 16: " + sqrtValue + "<br><br>"; 
+        // Using Math.pow() to calculate the power of a number 
+        var powerValue = Math.pow(2, 3); // 2 raised to the power of 3 
+        outputDiv.innerHTML += "2^3 (2 raised to the power of 3): " + powerValue + "<br><br>"; 
+        // Using Math.round() to round a number to the nearest integer 
+        var roundedValue = Math.round(4.5); 
+        outputDiv.innerHTML += "Math.round(4.5): " + roundedValue + "<br><br>"; 
+    </script> 
+</body> 
+ 
+</html> 

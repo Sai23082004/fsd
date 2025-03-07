@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <title>Date Object Program</title> 
+  <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px; 
+    } 
+    .output { 
+      margin-bottom: 10px; 
+    } 
+  </style> 
+</head> 
+<body> 
+  <h1>Date Object Properties and Methods</h1> 
+  <div class="output" id="currentDateTime"></div> 
+  <div class="output" id="year"></div> 
+  <div class="output" id="month"></div> 
+  <div class="output" id="dayOfMonth"></div> 
+  <div class="output" id="dayOfWeek"></div> 
+  <div class="output" id="hours"></div> 
+  <div class="output" id="minutes"></div> 
+  <div class="output" id="seconds"></div> 
+  <div class="output" id="milliseconds"></div> 
+  <div class="output" id="formattedDate"></div> 
+  <script> 
+    // Create a new Date object 
+    const currentDate = new Date(); 
+    // Display the current date and time 
+    document.getElementById("currentDateTime").textContent = "Current Date and Time: " + currentDate; 
+    // Get the full year 
+    document.getElementById("year").textContent = "Year: " + currentDate.getFullYear(); 
+    // Get the month (0-based index) 
+    document.getElementById("month").textContent = "Month: " + (currentDate.getMonth() + 1); // Adding 1 to make it 1-based 
+    // Get the day of the month 
+    document.getElementById("dayOfMonth").textContent = "Day of the month: " + currentDate.getDate(); 
+    // Get the day of the week (0 - Sunday, 6 - Saturday) 
+    document.getElementById("dayOfWeek").textContent = "Day of the week: " + currentDate.getDay(); 
+    // Get the hours 
+    document.getElementById("hours").textContent = "Hours: " + currentDate.getHours(); 
+    // Get the minutes 
+    document.getElementById("minutes").textContent = "Minutes: " + currentDate.getMinutes(); 
+    // Get the seconds 
+    document.getElementById("seconds").textContent = "Seconds: " + currentDate.getSeconds(); 
+    // Get the milliseconds 
+    document.getElementById("milliseconds").textContent = "Milliseconds: " + currentDate.getMilliseconds(); 
+    // Format the date as a string (e.g., "Thu Dec 12 2024 12:34:56 GMT+0000") 
+    document.getElementById("formattedDate").textContent = "Formatted Date: " + currentDate.toString(); 
+  </script> 
+</body> 
+</html> 

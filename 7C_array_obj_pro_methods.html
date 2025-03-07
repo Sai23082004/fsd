@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Array Object Example</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        #output { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            background-color: #f9f9f9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>Array Operations in JavaScript</h1> 
+    <div id="output"></div> 
+    <script> 
+        // Creating an array 
+        var numbers = [10, 20, 30, 40, 50]; 
+        // Output div element to show results 
+        var outputDiv = document.getElementById("output"); 
+        // Using array.length property 
+        outputDiv.innerHTML += "Array Length: " + numbers.length + "<br><br>"; 
+       // Using array.push() method to add an element to the end of the array 
+        numbers.push(60); 
+        outputDiv.innerHTML += "Array after push: " + numbers.join(", ") + "<br>"; 
+        // Using array.pop() method to remove the last element of the array 
+        var lastElement = numbers.pop(); 
+        outputDiv.innerHTML += "Array after pop: " + numbers.join(", ") + "<br>"; 
+        outputDiv.innerHTML += "Popped Element: " + lastElement + "<br><br>"; 
+        // Using array.unshift() method to add an element to the beginning of the array 
+        numbers.unshift(5); 
+        outputDiv.innerHTML += "Array after unshift: " + numbers.join(", ") + "<br>"; 
+        // Using array.shift() method to remove the first element of the array 
+        var firstElement = numbers.shift(); 
+        outputDiv.innerHTML += "Array after shift: " + numbers.join(", ") + "<br>"; 
+        outputDiv.innerHTML += "Shifted Element: " + firstElement + "<br><br>"; 
+        // Using array.indexOf() method to find the index of an element 
+        var index = numbers.indexOf(30); 
+        outputDiv.innerHTML += "Index of 30: " + index + "<br><br>"; 
+        // Using array.slice() method to extract a part of the array 
+        var slicedArray = numbers.slice(1, 4); 
+        outputDiv.innerHTML += "Sliced Array (from index 1 to 4): " + slicedArray.join(", ") + "<br><br>"; 
+        // Using array.join() method to join array elements into a string 
+        var joinedArray = numbers.join(", "); 
+        outputDiv.innerHTML += "Array as a string: " + joinedArray + "<br><br>"; 
+        // Using array.reverse() method to reverse the order of the elements in the array 
+        numbers.reverse(); 
+        outputDiv.innerHTML += "Array after reverse: " + numbers.join(", ") + "<br>"; 
+    </script> 
+</body> 
+</html> 

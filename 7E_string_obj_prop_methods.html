@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<head> 
+    <title>String Object Example</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        #output { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            background-color: #f9f9f9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>String Object Operations in JavaScript</h1> 
+    <div id="output"></div> 
+    <script> 
+        // Define a string 
+        var text = "Hello, JavaScript World!"; 
+        // Output div element to show results 
+        var outputDiv = document.getElementById("output"); 
+        // Using string.length property 
+        outputDiv.innerHTML += "Length of the string: " + text.length + "<br><br>"; 
+        // Using string.toUpperCase() method to convert the string to uppercase 
+        outputDiv.innerHTML += "Uppercase: " + text.toUpperCase() + "<br><br>"; 
+        // Using string.toLowerCase() method to convert the string to lowercase 
+        outputDiv.innerHTML += "Lowercase: " + text.toLowerCase() + "<br><br>"; 
+        // Using string.indexOf() method to find the position of a substring 
+        var index = text.indexOf("JavaScript"); 
+        outputDiv.innerHTML += "Index of 'JavaScript': " + index + "<br><br>"; 
+        // Using string.slice() method to extract a part of the string 
+        var slicedString = text.slice(7, 18); // Extracts substring from index 7 to 18 
+        outputDiv.innerHTML += "Sliced String (7 to 18): " + slicedString + "<br><br>"; 
+        // Using string.replace() method to replace a part of the string 
+        var replacedString = text.replace("World", "Universe"); 
+        outputDiv.innerHTML += "Replaced String: " + replacedString + "<br><br>"; 
+        // Using string.split() method to split the string into an array 
+        var splitArray = text.split(" "); 
+        outputDiv.innerHTML += "String split into an array: [" + splitArray.join(", ") + "]<br><br>"; 
+        // Using string.charAt() method to get the character at a specific index 
+        var charAtPosition = text.charAt(6); 
+        outputDiv.innerHTML += "Character at index 6: " + charAtPosition + "<br><br>"; 
+        // Using string.trim() method to remove whitespace from both ends 
+        var stringWithSpaces = "   Trim this string!   "; 
+        var trimmedString = stringWithSpaces.trim(); 
+        outputDiv.innerHTML += "Trimmed String: '" + trimmedString + "'<br><br>"; 
+       // Using string.includes() method to check if a substring exists 
+        var containsWord = text.includes("JavaScript"); 
+        outputDiv.innerHTML += "Does the string include 'JavaScript'? " + containsWord + "<br><br>"; 
+    </script> 
+</body> 
+</html> 

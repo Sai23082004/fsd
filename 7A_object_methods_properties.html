@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<head> 
+    <title>Document Object Example</title> 
+</head> 
+<body> 
+    <h1 id="heading">Hello, World!</h1> 
+    <button onclick="changeContent()">Change Heading</button> 
+    <script> 
+        function changeContent() { 
+            // Using document.getElementById to change the content of an element 
+            document.getElementById("heading").innerHTML = "Content Changed!"; 
+            // Using document.title to change the title of the document 
+            document.title = "New Page Title"; 
+            // Using document.body.style to change background color 
+            document.body.style.backgroundColor = "#f0f0f0"; 
+        } 
+    </script> 
+</body> 
+</html>

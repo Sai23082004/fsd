@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <title>RegEx Object Example</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        #output { 
+            margin-top: 20px; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            background-color: #f9f9f9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>RegEx Object Operations in JavaScript</h1> 
+    <div id="output"></div> 
+    <script> 
+        // Define a string to work with 
+        var text = "The quick brown fox jumps over the lazy dog 1234567890"; 
+        // Output div element to show results 
+        var outputDiv = document.getElementById("output"); 
+        // Create a regular expression using RegExp constructor 
+        var regex = new RegExp("fox"); 
+        // Using regex.test() method to test if a string matches the pattern 
+        var testResult = regex.test(text); 
+        outputDiv.innerHTML += "Test for 'fox': " + testResult + "<br><br>"; 
+        // Using regex.exec() method to find the first match of the pattern in the string 
+        var execResult = regex.exec(text); 
+        outputDiv.innerHTML += "Exec result for 'fox': " + (execResult ? execResult[0] : "No match") + 
+"<br><br>"; 
+       // Create a regex pattern to find all digits 
+        var digitRegex = /\d+/g; 
+        // Using string.match() method to find all matches of a regular expression in a string 
+        var matchResult = text.match(digitRegex); 
+        outputDiv.innerHTML += "Match digits in text: " + matchResult.join(", ") + "<br><br>"; 
+        // Using string.replace() method with a regular expression to replace all vowels with an asterisk 
+        var replaceResult = text.replace(/[aeiouAEIOU]/g, "*"); 
+        outputDiv.innerHTML += "Replace vowels with '*': " + replaceResult + "<br><br>"; 
+        // Using string.search() method to find the index of the first match of a regular expression 
+        var searchResult = text.search(/[A-Za-z]+/); 
+        outputDiv.innerHTML += "Search for first word (letters only): " + searchResult + "<br><br>"; 
+        // Using regex.test() to check if the string contains any uppercase letters 
+        var uppercaseRegex = /[A-Z]/; 
+        var hasUppercase = uppercaseRegex.test(text); 
+        outputDiv.innerHTML += "Contains uppercase letters: " + hasUppercase + "<br><br>"; 
+        // Using string.split() with a regex to split the string based on spaces 
+        var splitResult = text.split(/\s+/); 
+        outputDiv.innerHTML += "Split string by spaces: [" + splitResult.join(", ") + "]<br><br>"; 
+    </script> 
+</body> 
+</html>

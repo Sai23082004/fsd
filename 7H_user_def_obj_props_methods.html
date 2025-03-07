@@ -1,0 +1,81 @@
+< !DOCTYPE html> 
+    <html lang="en"> 
+    <head> 
+        <title>User-Defined Object Example</title> 
+    </head> 
+    <body> 
+        <h1>User-Defined Object in JavaScript</h1> 
+        <p>Google Chrome/Edge: Press Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac), then go to the "Console" tab. 
+            Open the console to see the output of the script demonstrating user-defined objects in JavaScript.</p> 
+        <script> 
+            // Define a user-defined object using a class 
+            class Car { 
+                // Constructor 
+                constructor(make, model, year) { 
+                    this._make = make; // Private-like property 
+                    this._model = model; // Private-like property 
+                    this._year = year; // Private-like property 
+                } 
+                // Getter for make 
+                get make() { 
+                    return this._make; 
+                } 
+                // Setter for make 
+                set make(value) { 
+                    if (!value) { 
+                        throw new Error("Make cannot be empty"); 
+                    } 
+                    this._make = value; 
+                } 
+                // Getter for model 
+                get model() { 
+                    return this._model; 
+                } 
+                // Setter for model 
+                set model(value) { 
+                    if (!value) { 
+                        throw new Error("Model cannot be empty"); 
+                    } 
+                    this._model = value; 
+                } 
+                // Getter for year 
+                get year() { 
+                    return this._year; 
+                } 
+                // Setter for year 
+                set year(value) { 
+                    if (value < 1900 || value > 2100) { 
+                        throw new Error("Year must be between 1900 and 2100"); 
+                    } 
+                    this._year = value; 
+                } 
+ 
+                // Method to display car details 
+                display() { 
+                    console.log(`Car Details: ${this._year} ${this._make} ${this._model}`); 
+                } 
+ 
+                // Method to check if the car is vintage 
+                isVintage() { 
+                    return this._year < 1990; 
+                } 
+            } 
+            // Create an instance of the Car class 
+            const car1 = new Car("Toyota", "Corolla", 2020); 
+            // Access and modify properties 
+            console.log("Initial Details:"); 
+            car1.display(); 
+            console.log("\nModifying Details:"); 
+            car1.make = "Honda"; 
+            car1.model = "Civic"; 
+            car1.year = 2018; 
+            car1.display(); 
+            // Use a method 
+            if (car1.isVintage()) { 
+                console.log("This car is vintage."); 
+            } else { 
+                console.log("This car is not vintage."); 
+            } 
+        </script> 
+    </body> 
+    </html> 
