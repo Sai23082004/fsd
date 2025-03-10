@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html> 
+ 
+<head> 
+    <title>Armstrong Number Checker</title> 
+</head> 
+ 
+<body> 
+    <script> 
+        const number = parseInt(prompt("Enter a number:")); 
+        const digits = number.toString().split(''); 
+        const sumOfCubes = digits.reduce((sum, digit) => sum + Math.pow(parseInt(digit), 3), 0); 
+ 
+        const message = sumOfCubes === number 
+            ? `${number} is an Armstrong Number.` 
+            : `${number} is not an Armstrong Number.`; 
+ 
+        document.body.innerHTML = `<h1>${message}</h1>`; 
+    </script> 
+</body> 
+ 
+</html>

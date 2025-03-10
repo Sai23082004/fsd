@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Display Weekdays</title> 
+</head> 
+<body> 
+    <script> 
+        const dayNumber = parseInt(prompt("Enter a number (1-7):")); 
+ 
+        let message; 
+        switch (dayNumber) { 
+            case 1: message = "Sunday"; break; 
+            case 2: message = "Monday"; break; 
+            case 3: message = "Tuesday"; break; 
+            case 4: message = "Wednesday"; break; 
+            case 5: message = "Thursday"; break; 
+            case 6: message = "Friday"; break; 
+            case 7: message = "Saturday"; break; 
+            default: message = "Invalid input! Please enter a number between 1 and 7."; 
+        } 
+        document.body.innerHTML = `<h1>${message}</h1>`; 
+    </script> 
+</body> 
+</html> 

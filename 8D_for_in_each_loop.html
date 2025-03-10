@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Print Object Data</title> 
+</head> 
+<body> 
+    <h1>Object Data Display</h1> 
+    <div id="output"></div> 
+    <script> 
+        const obj = { name: "Alice", age: 25, city: "New York" }; 
+        const outputDiv = document.getElementById("output"); 
+ 
+        outputDiv.innerHTML += "<h2>Using for-in loop:</h2>"; 
+        for (const key in obj) { 
+            outputDiv.innerHTML += `${key}: ${obj[key]}<br>`; 
+        } 
+        outputDiv.innerHTML += "<h2>Using for-each loop:</h2>"; 
+        Object.entries(obj).forEach(([key, value]) => { 
+            outputDiv.innerHTML += `${key}: ${value}<br>`; 
+        }) 
+        outputDiv.innerHTML += "<h2>Using for-of loop:</h2>"; 
+        for (const [key, value] of Object.entries(obj)) { 
+            outputDiv.innerHTML += `${key}: ${value}<br>`; 
+        } 
+    </script> 
+</body> 
+</html> 
