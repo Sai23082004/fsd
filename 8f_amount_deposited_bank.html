@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Denomination Calculator</title> 
+</head> 
+<body> 
+    <script> 
+        const amount = parseInt(prompt("Enter the amount:")); 
+        let remaining = amount; 
+        const denominations = [100, 50, 20, 10, 5, 2, 1]; 
+        const result = {}; 
+ 
+        for (const denom of denominations) { 
+            result[denom] = Math.floor(remaining / denom); 
+            remaining %= denom; 
+        } 
+        document.body.innerHTML = `<h1>For amount Rs.${amount}, the denomination is:</h1>`; 
+        for (const [denom, count] of Object.entries(result)) { 
+            if (count > 0) { 
+                document.body.innerHTML += `<p>${count} x Rs.${denom}</p>`; 
+            } 
+        } 
+    </script> 
+</body> 
+</html>
