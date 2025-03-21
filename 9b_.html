@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Number Operations</title> 
+    <script> 
+        // Factorial Function 
+        function factorial() { 
+            const num = parseInt(document.getElementById('number').value); 
+            let result = 1; 
+            for (let i = 1; i <= num; i++) { 
+                result *= i; 
+            } 
+            document.getElementById('result').innerHTML = `Factorial: ${result}`; 
+        } 
+        // Fibonacci Series Function 
+        function fibonacci() { 
+            const num = parseInt(document.getElementById('number').value); 
+            let fib = [0, 1]; 
+            for (let i = 2; i <= num; i++) { 
+                fib[i] = fib[i - 1] + fib[i - 2]; 
+            } 
+            document.getElementById('result').innerHTML = `Fibonacci Series: ${fib.join(', ')}`; 
+        } 
+        // Prime Numbers Function 
+        function primeNumbers() { 
+            const num = parseInt(document.getElementById('number').value); 
+
+ 
+            let primes = []; 
+            for (let i = 2; i <= num; i++) { 
+                let isPrime = true; 
+                for (let j = 2; j <= Math.sqrt(i); j++) { 
+                    if (i % j === 0) { 
+                        isPrime = false; 
+                        break;    }      } 
+                if (isPrime) { 
+                    primes.push(i);      }        } 
+            document.getElementById('result').innerHTML = `Prime Numbers: ${primes.join(', ')}`; 
+        } 
+        // Palindrome Function 
+        function palindrome() { 
+            const num = document.getElementById('number').value; 
+            const reversed = num.split('').reverse().join(''); 
+            if (num === reversed) { 
+                document.getElementById('result').innerHTML = `Palindrome: Yes`; 
+            } else { 
+                document.getElementById('result').innerHTML = `Palindrome: No`; 
+            }    } 
+    </script> 
+</head> 
+<body> 
+    <h2>Number Operations</h2> 
+    <label for="number">Enter a number:</label> 
+    <input type="text" id="number" name="number"><br><br> 
+    <button onclick="factorial()">Factorial</button> 
+    <button onclick="fibonacci()">Fibonacci</button> 
+    <button onclick="primeNumbers()">Prime Numbers</button> 
+    <button onclick="palindrome()">Palindrome</button> 
+    <p id="result"></p> 
+</body> </html>

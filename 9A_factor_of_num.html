@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Functions</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .result { margin: 10px 0; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" min="0" required>
+    <div>
+        <h2>Results:</h2>
+        <p id="factorialResult" class="result"></p>
+        <p id="fibonacciResult" class="result"></p>
+        <p id="primeNumbersResult" class="result"></p>
+        <p id="palindromeResult" class="result"></p>
+    </div>
+    <script>
+        // Factorial function with overflow protection
+        function factorial(num) {
+            if (num < 0) return "Factorial is not defined for negative numbers.";
+            if (num > 170) return "Number too large for factorial calculation.";
+            if (num === 0) return 1;
+            let result = 1;
+            for (let i = 1; i <= num; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        // Fibonacci function with length limit
+        function fibonacci(num) {
+            if (num <= 0) return [];
+            if (num > 100) return "Input limited to 100 for performance.";
+            let fib = [0, 1];
+            for (let i = 2; i < num; i++) {
+                fib.push(fib[i - 1] + fib[i - 2]);
+            }
+            return fib;
+        }
+
+        // Optimized prime numbers function
+        function primeNumbers(num) {
+            if (num < 2) return [];
+            let primes = [];
+            // Sieve of Eratosthenes optimization
+            let sieve = new Array(num + 1).fill(true);
+            sieve[0] = sieve[1] = false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (sieve[i]) {
+                    for (let j = i * i; j <= num; j += i) {
+                        sieve[j] = false;
+                    }
+                }
+            }
+            for (let i = 2; i <= num; i++) {
+                if (sieve[i]) primes.push(i);
+            }
+            return primes;
+        }
+
+        // Palindrome function
+        function isPalindrome(num) {
+            if (num < 0) return false;
+            const numStr = num.toString();
+            const reversedStr = numStr.split('').reverse().join('');
+            return numStr === reversedStr;
+        }
+
+        // Update results with error handling
+        function updateResults() {
+            const input = document.getElementById('numberInput');
+            const num = parseInt(input.value);
+            
+            // Clear previous results
+            const results = ['factorialResult', 'fibonacciResult', 
+                           'primeNumbersResult', 'palindromeResult'];
+            results.forEach(id => document.getElementById(id).innerText = '');
+
+            if (isNaN(num) || input.value === '') {
+                document.getElementById('factorialResult').classList.add('error');
+                document.getElementById('factorialResult').innerText = 
+                    'Please enter a valid number';
+                return;
+            }
+
+            try {
+                // Factorial
+                const factResult = factorial(num);
+                document.getElementById('factorialResult').innerText = 
+                    `Factorial: ${factResult}`;
+
+                // Fibonacci
+                const fibResult = fibonacci(num);
+                document.getElementById('fibonacciResult').innerText = 
+                    `Fibonacci Series: ${Array.isArray(fibResult) ? 
+                    fibResult.join(', ') : fibResult}`;
+
+                // Prime numbers
+                const primesResult = primeNumbers(num);
+                document.getElementById('primeNumbersResult').innerText = 
+                    `Prime Numbers: ${Array.isArray(primesResult) ? 
+                    primesResult.join(', ') : primesResult}`;
+
+                // Palindrome
+                const palResult = isPalindrome(num) ? 
+                    "Yes, it is a palindrome." : 
+                    "No, it is not a palindrome.";
+                document.getElementById('palindromeResult').innerText = 
+                    `Palindrome: ${palResult}`;
+            } catch (error) {
+                document.getElementById('factorialResult').classList.add('error');
+                document.getElementById('factorialResult').innerText = 
+                    `Error: ${error.message}`;
+            }
+        }
+
+        // Debounce function to limit update frequency
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Add debounced event listener
+        const debouncedUpdate = debounce(updateResults, 300);
+        document.getElementById('numberInput').addEventListener('input', debouncedUpdate);
+    </script>
+</body>
+</html>
